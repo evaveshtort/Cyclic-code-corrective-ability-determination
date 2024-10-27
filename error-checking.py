@@ -18,6 +18,7 @@ def bin_div(dividend, divider):
         now = res + later[:(l-len(res))]
         later = later[(l-len(res)):]
         res = ''
+    if res + later = '0': return ''
     return res + later
 
 def bin_sum(signal, error):

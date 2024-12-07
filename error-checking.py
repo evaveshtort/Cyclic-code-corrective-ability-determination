@@ -90,9 +90,9 @@ for i in range (1, 128):
 
 with open('result.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Кратность', 'Количество ошибок', 
+    writer.writerow(['Кратность', 'Количество ошибок', 'Обнаруженное количество ошибок',
                     'Обнаруживающая способность', 'Корректирующая способность'])
     for i in result.keys():
-        writer.writerow([i, result[i]['count'], result[i]['found'] / result[i]['count'], 
+        writer.writerow([i, result[i]['count'], result[i]['found'], result[i]['found'] / result[i]['count'], 
                     result[i]['corrected'] / result[i]['count']])
     
